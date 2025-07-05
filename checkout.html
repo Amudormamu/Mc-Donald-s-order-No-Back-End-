@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Done</h1>
+    <a href=".html">← Back to Menu</a>
+</header>
+  
+  <h1>thank you</h1> 
+
+</body>
+</html>
+<script>
+  // Clear the cart in localStorage
+  localStorage.removeItem('cart');
+
+  
+  setTimeout(() => {
+    window.location.href = 'index.html'; // Redirect to home menu
+  }, 3000); // Redirect after 3 seconds 
+  </script>

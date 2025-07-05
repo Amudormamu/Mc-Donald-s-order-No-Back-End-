@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image/hd-mcdonalds-red-round-circular-circle-logo-icon-png-image-7017516947898359qtpcakiqi.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Burger Details</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>Your Cart</h1>
+        <a href="index.html">← Back to Menu</a>
+    </header>
+
+    <div class="burger-details">
+        <h1>Burger Details</h1>
+        <div id="details-container">
+            <img id="burger-image" src="" alt="Burger Image">
+            <h2 id="burger-name"></h2>
+            <p>Price: R<span id="burger-price"></span></p>
+
+            <label for="quantity">Quantity:</label>
+            <div class="quantity-controls">
+                <button onclick="changeQuantity(-1)">−</button>
+                <input type="number" id="quantity" value="1" min="1" readonly>
+                <button onclick="changeQuantity(1)">+</button>
+            </div>
+
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        const burger = JSON.parse(localStorage.getItem('selectedBurger'));
+
+        if (burger) {
+            document.getElementById('burger-name').innerText = burger.name;
+            document.getElementById('burger-image').src = burger.image;
+            document.getElementById('burger-price').innerText = burger.price;
+        }
+
+        function changeQuantity(amount) {
+            const quantityInput = document.getElementById('quantity');
+            let current = parseInt(quantityInput.value);
+            current += amount;
+            if (current < 1) current = 1;
+            quantityInput.value = current;
+        }
+
+        function addToCart() {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const item = {
+                name: burger.name,
+                image: burger.image,
+                price: burger.price,
+                quantity: quantity
+            };
+
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Added to cart!');
+        }
+
+       
+  
+
+  
+     setTimeout(() => {
+     window.location.href = 'index.html'; // Redirect to home menu
+    }, 9100); // Redirect after 
+  
+    </script>
+</body>
+</html>

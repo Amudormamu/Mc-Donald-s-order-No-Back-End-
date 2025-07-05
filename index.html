@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image/hd-mcdonalds-red-round-circular-circle-logo-icon-png-image-7017516947898359qtpcakiqi.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Menu</title>
+</head>
+<body >
+    <div>
+        <header>
+
+            <div style="position: absolute; top: 20px; right: 40px;">
+                <a href="cart.html" style="text-decoration: none; color: black;">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                    <span id="cart-count" style="background: red; color: white; border-radius: 50%; padding: 2px 8px; font-size: 14px; position: absolute; top: -10px; right: -10px;">0</span>
+                </a>
+            </div>
+            
+           <h1>Home Menu </h1>
+           
+            
+        </header>
+
+    </div>
+   
+    <div class="sidebar">
+        
+        <img  src="image/pngimg.com - mcdonalds_PNG17.png" alt="">
+        <h2>Menu</h2>
+        <ul>
+
+            <li class="nav-item active-tab ">  <a href="index.html">
+                <img src="image/Big-Mac-meal.webp" alt="Burger Icon" class="icon-img"><center>Home</center> </a></li>
+ 
+
+            <li class="nav-item ">  <a href="burgers.html">
+                <img src="image/food/bagers/Cheeseburger.webp" alt="Burger Icon" class="icon-img"><center>Burgers</center> </a></li>
+
+            <li class="nav-item"> <a href="sides.html">
+                <img src="image/food/Limited/Fries.webp" alt=""><center>Sides</center> </a> </li>
+
+            <li class="nav-item"><a href="drinks.html">
+                <img src="image/food/drinks/New-Coke-Glasses-for-Coke-copy.webp" alt=""><center>Drinks</center> </a> </li>
+
+            <li class="nav-item"> <a href="desserts.html">
+                <img src="image/food/Desserts/kitkat.png" alt=""><center>Desserts</center></a> </li>
+            
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        
+        
+        <div class="Ad">
+            <video autoplay loop src="image/SSYouTube.online_Shhhhh, The Hush Hush Menu is an app exclusive_1080p.mp4"></video>
+            
+
+
+        </div>
+        
+
+        <div  class="cards">
+            <p>What would you like to eat today?</p>
+
+
+            <div  class="cards">
+
+
+                <div class="card" ><a href="burgers.html">
+                    
+                    <img src="image/food/bagers/McDonalds-Image-Resize.psdMcFeast.png" alt="Burger">
+                    <h2>Burgers</h2>
+                    
+                </a>
+                </div>
+                <div class="card"><a href="sides.html">
+                    
+                    <img src="image/food/Limited/Fries.webp" alt="Fries">
+                    <h2>Sides</h2>
+                    
+                </a>
+                </div>
+                <div class="card"><a href="drinks.html">
+                    
+                    <img src="image/food/drinks/New-McFizz-Glasses-without-the-Made-with-Sprite-Lockup-R-copy.webp" alt="Drinks">
+                    <h2>Drinks</h2>
+                </a>
+                </div>
+                <div class="card"><a href="desserts.html">
+                    
+                    <img src="image/food/Desserts/kitkat.png" alt="Desserts">
+                    <h2>Desserts</h2>
+                    
+                </a>
+                </div>
+
+                
+
+              
+    
+
+        </div>
+        
+
+        
+
+               
+        
+               
+                    
+                
+                
+                
+           
+
+
+        </div>
+
+    </div>
+    <script>
+      
+
+        // Update cart count
+
+        function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let total = 0;
+        cart.forEach(item => total += item.quantity);
+        const cartCountElement = document.getElementById('cart-count');
+        if (cartCountElement) cartCountElement.innerText = total;
+    }
+
+    updateCartCount();
+
+    </script>
+    
+</body>
+</html>
